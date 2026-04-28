@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云麓仙途</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section class="game-shell">
+        <div id="game"></div>
+        <div class="hud">
+          <div class="brand">
+            <span class="seal">云麓</span>
+            <div>
+              <h1>云麓仙途</h1>
+              <p id="realmText">练气一层</p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="bar">
+              <span>灵气</span>
+              <strong id="qiValue">0 / 100</strong>
+              <i><b id="qiBar"></b></i>
+            </div>
+            <div class="bar">
+              <span>心境</span>
+              <strong id="mindValue">60 / 100</strong>
+              <i><b id="mindBar"></b></i>
+            </div>
+          </div>
+        </div>
+        <aside class="panel">
+          <div class="stats">
+            <div><span>寿元</span><strong id="ageText">16 / 80</strong></div>
+            <div><span>灵石</span><strong id="stoneText">20</strong></div>
+            <div><span>草药</span><strong id="herbText">8</strong></div>
+            <div><span>丹药</span><strong id="pillText">1</strong></div>
+          </div>
+          <div class="actions">
+            <button data-action="cultivate">吐纳修炼</button>
+            <button data-action="alchemy">炼制丹药</button>
+            <button data-action="travel">下山游历</button>
+            <button data-action="meditate">静室调息</button>
+            <button class="breakthrough" data-action="breakthrough">冲击境界</button>
+          </div>
+          <div class="event-card">
+            <h2>今日机缘</h2>
+            <p id="eventText">晨雾漫过灵田，山门外的青石阶还带着夜雨。</p>
+          </div>
+          <ol id="log" class="log"></ol>
+        </aside>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+    <script src="./src/game.js"></script>
+  </body>
+</html>
